@@ -1,0 +1,260 @@
+//Day-2(Module-23 ArrayLists)--23/07/2024
+
+import java.util.*;
+
+//Defining and Operations on ArrayLists
+
+/* public class ArrayLists {
+    public static void main(String[] args) {
+        ArrayList<Integer> list=new ArrayList<>();
+        
+        //1. To add an element in a list-T.C.-O(1)
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(3,25);//- T.C.-O(n)
+
+        System.out.println(list);
+
+        //2. To get an element from a list-T.C.-O(1)
+
+        int element=list.get(2);
+        System.out.println(element);
+
+        //3. To remove an element from a list-T.C.-O(n)
+
+        list.remove(3);
+        System.out.println(list);
+
+        //4. To set/replace an element in a list-O(n);
+        list.set(3,29);
+        System.out.println(list);
+
+        //5. To find element contains or not-O(n)
+        
+    
+        System.out.println(list.contains(3));
+
+    }
+}
+ */
+
+// To find length of an AL-.size();
+
+
+/* public class ArrayLists {
+
+    public static void main(String[] args) {
+        ArrayList <Integer> list=new ArrayList<>();
+        
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+
+        System.out.println(list.size());
+
+        //Get element using loop
+
+        for(int i=0;i<list.size();i++){
+            System.out.print(list.get(i)+" ");
+        }
+        System.out.println();
+
+    }
+    
+} */
+
+//Reverse an array list element and print
+
+/* public class ArrayLists {
+
+    public static void main(String[] args) {
+        ArrayList <Integer> list=new ArrayList<>();
+        
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+
+//Backward Loop
+        for(int i=list.size()-1;i>=0;i--){
+            System.out.print(list.get(i)+" ");
+        }
+        System.out.println();
+
+    }
+    
+} 
+
+
+ */
+
+
+ //Find Max elements-T.C-O(n)
+
+ /* public class ArrayLists {
+ public static void main(String[] args) {
+    ArrayList <Integer> list=new ArrayList<>();
+        
+    list.add(10);
+    list.add(3);
+    list.add(18);
+    list.add(4);
+    list.add(12);
+
+    int max=Integer.MIN_VALUE;
+    for(int i=0;i<list.size();i++){
+        max=Math.max(max, list.get(i));
+    }
+    System.out.println("Maximum element is: "+ max);
+ }   
+ } */
+
+ //Swap two numbers, idx=1 and idx=3
+
+
+/* public class ArrayLists {
+
+    public static void swap(ArrayList<Integer>list,int idx1,int idx2){
+          int temp=list.get(idx1);
+          list.set(idx1,list.get(idx2));
+          list.set(idx2,temp); 
+    }
+    public static void main(String[] args) {
+        ArrayList <Integer> list=new ArrayList<>();
+
+        list.add(2);
+        list.add(4);
+        list.add(24);
+        list.add(15);
+        list.add(14);
+        
+        System.out.println(list);
+        swap(list, 1, 3);
+        System.out.println(list);
+    }
+    
+}
+ */
+
+//Sorting of Array list- Collections.sort(list)
+
+/* public class ArrayLists {
+
+    public static void main(String[] args) {
+        ArrayList <Integer> list=new ArrayList<>();
+
+        list.add(2);
+        list.add(1);
+        list.add(24);
+        list.add(15);
+        list.add(14);
+        
+        System.out.println(list);
+        Collections.sort(list); //ascending order 
+        System.out.println(list);
+        
+        Collections.sort(list,Collections.reverseOrder());//descending order
+        //here Collections in parenthesses is compartor- inbuild logic function
+        System.out.println(list);
+
+    }
+    
+}
+ */
+
+
+//Multidimensional array list-2D Array list
+
+/* public class ArrayLists {
+
+    public static void main(String[] args) {
+        ArrayList <ArrayList<Integer>> mainList=new ArrayList<>(); //main list
+        ArrayList <Integer> list1=new ArrayList<>();
+        ArrayList <Integer> list2=new ArrayList<>();
+        ArrayList <Integer> list3=new ArrayList<>(); */
+
+        //method 1st-input element
+
+        /* list1.add(1);
+        list1.add(2);
+        list1.add(3);
+        list1.add(4);
+        list1.add(5);
+        list2.add(2);
+        list2.add(4);
+        list2.add(6);
+        list2.add(8);
+        list2.add(10);
+        list3.add(3);
+        list3.add(6);
+        list3.add(9);
+        list3.add(12);
+        list3.add(15);
+        mainList.add(list1);
+        mainList.add(list2);
+        mainList.add(list3); */
+
+        //method 2--input element
+
+       /*  for(int i=1;i<=5;i++){
+            list1.add(i*1); //1 ,2, 3, 4, 5
+            list2.add(i*2); //2,4,6,8,10
+            list3.add(i*3); // 3,6,9,12,15
+        } */
+
+        
+        /* System.out.println(list1);
+        System.out.println(list2);
+        System.out.println(list3);
+        System.out.println(mainList);  */
+
+        //method to print mainlist-output
+
+        /* for(int i=0;i<mainList.size();i++){
+            ArrayList <Integer> currList=mainList.get(i);
+            for(int j=0;j<currList.size();j++){
+                System.out.print(currList.get(j)+" ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    } */
+//}
+
+//Container with most water- Brute force approach- T.C-O(n)
+
+public class ArrayLists {
+    public static int waterStorage(ArrayList <Integer> height){
+        int maxWaterStorage=0;
+        for(int i=0;i<height.size();i++){
+            for(int j=i+1;j<height.size();j++){
+                int ht=Math.min(height.get(i),height.get(j));
+                int width=j-i;
+                int area=ht*width;
+                maxWaterStorage=Math.max(maxWaterStorage, area);
+            }
+        }
+        return maxWaterStorage;
+    }
+    public static void main(String[] args) {
+        ArrayList<Integer> height=new ArrayList<>();
+        height.add(1);
+        height.add(8);
+        height.add(6);
+        height.add(2);
+        height.add(5);
+        height.add(4);
+        height.add(8);
+        height.add(3);
+        height.add(7);
+        
+        System.out.println(waterStorage(height));
+
+    }
+}
